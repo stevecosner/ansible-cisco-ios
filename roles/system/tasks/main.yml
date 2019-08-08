@@ -1,0 +1,8 @@
+---
+
+- name: configure hostname and domain system
+  ios_system:
+    hostname: ios01
+    domain_name: test.example.com
+    lookup_enabled: yes
+    name_servers: 192.168.1.30
