@@ -4,6 +4,6 @@
   connection: network_cli
   
   roles:
-   - ping
-   - system           
-     
+#   - ping
+#   - system           
+    - banner     
