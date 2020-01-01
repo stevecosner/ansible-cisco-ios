@@ -6,4 +6,5 @@
   roles:
 #   - ping
 #   - system           
-    - banner     
+#    - banner     
+    - logging
