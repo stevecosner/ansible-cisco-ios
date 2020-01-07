@@ -1,0 +1,6 @@
+- name: configure logging for syslog server host
+  ios_logging:
+    dest: host
+    name: 172.16.50.2
+#    level: critical
+    state: present
