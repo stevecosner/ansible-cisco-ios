@@ -1,0 +1,7 @@
+- name: Show Run
+  ios_command:
+    commands: show run
+    
+  register: interface
+
+- debug: var=interface.stdout_lines 

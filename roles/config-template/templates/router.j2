@@ -1,0 +1,5 @@
+
+{% if loopback is defined %}
+interface Loopback0
+ ip address {{ loopback.address }} {{ loopback.mask }}
+{% endif %}

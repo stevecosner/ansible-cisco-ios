@@ -1,0 +1,12 @@
+---
+- hosts: routers
+  gather_facts: no
+  connection: network_cli
+
+  
+  tasks:
+   - name: Change Hostname   
+     ios_config:
+       
+       commands: 
+         - hostname R1

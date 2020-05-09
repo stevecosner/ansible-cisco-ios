@@ -1,0 +1,15 @@
+---
+- hosts: routers
+  gather_facts: no
+  connection: network_cli
+
+  
+  tasks:
+   - name: Show Interfaces   
+     ios_command:
+       
+       commands: 
+         - show ip int b
+     register: interface
+
+   - debug: var=interface.stdout_lines
