@@ -1,0 +1,37 @@
+- name: add vlans
+
+  ios_vlans:
+
+    config:
+
+      - name: Vlan_105A
+
+        vlan_id: 105
+
+      - name: Vlan_106A
+
+        vlan_id: 106
+
+- name: configure interface settings
+
+  ios_config:
+
+    lines:
+
+      - description test ansible vlan
+      - switchport mode access
+      - switchport access vlan 105
+
+    parents: interface f0/6
+
+- name: configure interface settings
+
+  ios_config:
+
+    lines:
+
+      - description test ansible vlan
+      - switchport mode access
+      - switchport access vlan 105
+
+    parents: interface f0/7     
