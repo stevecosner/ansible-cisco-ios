@@ -1,5 +1,6 @@
-
-{% if loopback is defined %}
-interface Loopback0
- ip address {{ loopback.address }} {{ loopback.mask }}
-{% endif %}
+interface loop 300
+  description loop 300
+  ip address 3.3.3.3 255.255.255.255
+!
+ntp server 129.250.35.250
+ 

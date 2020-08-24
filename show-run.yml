@@ -1,0 +1,15 @@
+---
+- hosts: r1
+  gather_facts: no
+  connection: network_cli
+
+  
+  tasks:
+   - name: Show run config   
+     ios_command:
+       
+       commands: 
+         - show run
+     register: run
+
+   - debug: var=run.stdout_lines

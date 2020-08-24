@@ -3,3 +3,10 @@
 - name: Change Hostname   
   ios_config:
     lines: hostname R1
+
+- name: Loopback 200
+  ios_config:
+    lines: 
+      - ip add 200.200.200.200 255.255.255.255
+      - description loop 200 with ansible
+    parents: int loop 200  

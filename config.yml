@@ -1,5 +1,5 @@
 ---
-- hosts: routers
+- hosts: r1
   gather_facts: no
   connection: network_cli
 
@@ -10,3 +10,13 @@
        
        commands: 
          - hostname R1
+
+  tasks:
+   - name: Loopback 100   
+     ios_config:
+       
+       lines: 
+         - ip add 100.100.100.100 255.255.255.255
+         - description loop 100 with ansible
+       parents:
+         - int loop 100
