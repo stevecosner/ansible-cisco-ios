@@ -1,0 +1,16 @@
+---
+- hosts: R1
+  gather_facts: no
+  connection: network_cli
+  
+  tasks:
+   - name: validate connection from R1
+     ios_ping:
+       dest: '{{ item }}'
+       state: 'present'
+     when: "'R1' in inventory_hostname"
+     with_items:
+
+       - '8.8.8.8'
+
+

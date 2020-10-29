@@ -1,0 +1,17 @@
+
+---
+- hosts: R1
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+   - name: configure the login banner
+     ios_banner:
+       banner: motd
+       text: |
+         #########################################################
+         this is my login banner
+         that contains a multiline
+         string
+         #########################################################
+       state: present

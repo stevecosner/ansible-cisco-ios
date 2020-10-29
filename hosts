@@ -8,8 +8,10 @@
 #   - You can enter hostnames or ip addresses
 #   - A hostname/ip can be a member of multiple groups
 
+
+
 [homelab]
-r1 ansible_host=10.1.1.54
+r1 ansible_host=10.1.1.81
 s1 ansible_host=10.1.1.103
 
 
